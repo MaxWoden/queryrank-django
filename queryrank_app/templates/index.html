@@ -1,0 +1,312 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Главная - QueryRank{% endblock %}
+
+{% block content %}
+<div class="fullscreen-sections">
+    <!-- Блок 1: Герой -->
+    <section class="fullscreen-section hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Проектирование и разработка программного средства обработки запросов пользователя и ранжирования информации в интернет-магазине</h2>
+                <p>Инновационная система для повышения эффективности поиска товаров и улучшения пользовательского опыта</p>
+                <a href="#about" class="btn">Узнать о проекте</a>
+            </div>
+            <div class="scroll-indicator">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Блок 2: Рассказ о проекте -->
+    <section id="about" class="fullscreen-section about-project">
+        <div class="container">
+            <div class="section-title-center">
+                <h2>Рассказ о проекте</h2>
+                <p>Комплексное решение для обработки пользовательских запросов и интеллектуального ранжирования информации в интернет-магазинах</p>
+            </div>
+            
+            <div class="about-categories">
+                <div class="about-category">
+                    <div class="category-icon">
+                        <i class="fas fa-info-circle"></i>
+                    </div>
+                    <h3>О проекте</h3>
+                    <p>Наша система использует передовые алгоритмы обработки естественного языка и машинного обучения для точного понимания запросов покупателей.</p>
+                    <ul class="category-list">
+                        <li><i class="fas fa-check"></i> Анализ смысла запросов</li>
+                        <li><i class="fas fa-check"></i> Исправление опечаток</li>
+                        <li><i class="fas fa-check"></i> Учет синонимов и контекста</li>
+                    </ul>
+                </div>
+                
+                <div class="about-category">
+                    <div class="category-icon">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <h3>Этапы</h3>
+                    <p>Поэтапный подход к внедрению системы гарантирует максимальную эффективность и быструю интеграцию.</p>
+                    <div class="stage-timeline">
+                        <div class="stage">
+                            <div class="stage-number">1</div>
+                            <div class="stage-content">
+                                <h4>Анализ</h4>
+                                <p>Изучение специфики магазина</p>
+                            </div>
+                        </div>
+                        <div class="stage">
+                            <div class="stage-number">2</div>
+                            <div class="stage-content">
+                                <h4>Интеграция</h4>
+                                <p>Подключение к платформе</p>
+                            </div>
+                        </div>
+                        <div class="stage">
+                            <div class="stage-number">3</div>
+                            <div class="stage-content">
+                                <h4>Обучение</h4>
+                                <p>Настройка алгоритмов</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-category">
+                    <div class="category-icon">
+                        <i class="fas fa-images"></i>
+                    </div>
+                    <h3>Галерея</h3>
+                    <p>Визуальное представление работы системы и интерфейсов.</p>
+                    <div class="gallery-preview">
+                        <div class="gallery-item">
+                            <i class="fas fa-chart-bar"></i>
+                            <p>Аналитика</p>
+                        </div>
+                        <div class="gallery-item">
+                            <i class="fas fa-desktop"></i>
+                            <p>Интерфейс</p>
+                        </div>
+                        <div class="gallery-item">
+                            <i class="fas fa-cogs"></i>
+                            <p>Настройки</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="about-bottom">
+                <div class="target-audience">
+                    <h3><i class="fas fa-users"></i> Целевая аудитория</h3>
+                    <div class="audience-items">
+                        <div class="audience-item">
+                            <i class="fas fa-store"></i>
+                            <h4>Интернет-магазины</h4>
+                            <p>Любого размера и специализации</p>
+                        </div>
+                        <div class="audience-item">
+                            <i class="fas fa-shopping-cart"></i>
+                            <h4>Маркетплейсы</h4>
+                            <p>Платформы с большим ассортиментом</p>
+                        </div>
+                        <div class="audience-item">
+                            <i class="fas fa-industry"></i>
+                            <h4>Корпорации</h4>
+                            <p>Крупные компании с онлайн-продажами</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Блок 3: Блоки доверия -->
+    <section class="fullscreen-section trust-section">
+        <div class="container">
+            <div class="section-title-center">
+                <h2>Блоки доверия</h2>
+                <p>Наша система заслужила доверие сотен клиентов благодаря качеству и надежности</p>
+            </div>
+            
+            <div class="trust-categories">
+                <div class="trust-category">
+                    <div class="trust-icon">
+                        <i class="fas fa-comment-alt"></i>
+                    </div>
+                    <h3>Отзывы</h3>
+                    <div class="testimonial">
+                        <p class="testimonial-text">"Внедрение QueryRank увеличило конверсию поиска на 40%."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="author-info">
+                                <h4>Алексей Иванов</h4>
+                                <p>Директор, TechStore</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial">
+                        <p class="testimonial-text">"Пользователи находят товары в 2 раза быстрее с вашей системой."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="author-info">
+                                <h4>Мария Петрова</h4>
+                                <p>Менеджер, HomeGoods</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="trust-category">
+                    <div class="trust-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>Гарантии и сертификаты</h3>
+                    <ul class="guarantee-list">
+                        <li><i class="fas fa-shield-alt"></i> Гарантия качества ISO 9001</li>
+                        <li><i class="fas fa-lock"></i> Безопасность данных</li>
+                        <li><i class="fas fa-clock"></i> Круглосуточная поддержка</li>
+                        <li><i class="fas fa-sync"></i> Бесплатные обновления</li>
+                    </ul>
+                    <div class="partners">
+                        <h4>Наши партнеры</h4>
+                        <div class="partner-logos">
+                            <div class="partner-logo">
+                                <i class="fas fa-cloud"></i>
+                                <p>CloudTech</p>
+                            </div>
+                            <div class="partner-logo">
+                                <i class="fas fa-server"></i>
+                                <p>DataSecure</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="trust-category">
+                    <div class="trust-icon">
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                    <h3>FAQ и команда</h3>
+                    <div class="faq">
+                        <div class="faq-item">
+                            <h4><i class="fas fa-question"></i> Сколько стоит внедрение?</h4>
+                            <p>Стоимость зависит от размера магазина. Есть тарифы для малого, среднего и крупного бизнеса.</p>
+                        </div>
+                        <div class="faq-item">
+                            <h4><i class="fas fa-question"></i> Как быстро происходит интеграция?</h4>
+                            <p>От 3 до 14 дней в зависимости от сложности и платформы.</p>
+                        </div>
+                    </div>
+                    <div class="team-preview">
+                        <h4>Наша команда</h4>
+                        <p>15+ специалистов в области AI и e-commerce</p>
+                        <div class="team-stats">
+                            <div class="team-stat">
+                                <div class="stat-number">8</div>
+                                <div class="stat-label">Лет опыта</div>
+                            </div>
+                            <div class="team-stat">
+                                <div class="stat-number">150+</div>
+                                <div class="stat-label">Проектов</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Блок 4: Понятные выгоды -->
+    <section class="fullscreen-section benefits-section">
+        <div class="container">
+            <div class="section-title-center">
+                <h2>Понятные выгоды</h2>
+                <p>Ключевые преимущества, которые получит ваш интернет-магазин</p>
+            </div>
+            
+            <div class="benefits-content">
+                <div class="benefits-main">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <div class="benefit-text">
+                            <h3>Ускорение поиска товаров</h3>
+                            <p>Пользователи находят нужные товары в среднем на 65% быстрее благодаря интеллектуальному алгоритму.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="benefit-text">
+                            <h3>Рост конверсии</h3>
+                            <p>Увеличение конверсии поисковых запросов в покупки на 30-45% за счет релевантных результатов.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-user-check"></i>
+                        </div>
+                        <div class="benefit-text">
+                            <h3>Удовлетворенность клиентов</h3>
+                            <p>Улучшение пользовательского опыта приводит к повышению лояльности и повторным покупкам.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="benefits-side">
+                    <div class="thesis-list">
+                        <h3>Ключевые тезисы</h3>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> Работает с любыми CMS</li>
+                            <li><i class="fas fa-check-circle"></i> Не требует замены оборудования</li>
+                            <li><i class="fas fa-check-circle"></i> Обучение за 1 день</li>
+                            <li><i class="fas fa-check-circle"></i> Окупаемость за 3 месяца</li>
+                            <li><i class="fas fa-check-circle"></i> Масштабируется под любой трафик</li>
+                            <li><i class="fas fa-check-circle"></i> Поддержка 24/7</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="use-cases">
+                        <h3>Сценарии использования</h3>
+                        <div class="use-case">
+                            <div class="use-case-icon">
+                                <i class="fas fa-search"></i>
+                            </div>
+                            <div class="use-case-text">
+                                <h4>Поиск по описанию</h4>
+                                <p>Пользователь описывает товар своими словами</p>
+                            </div>
+                        </div>
+                        <div class="use-case">
+                            <div class="use-case-icon">
+                                <i class="fas fa-filter"></i>
+                            </div>
+                            <div class="use-case-text">
+                                <h4>Умная фильтрация</h4>
+                                <p>Автоматическое сужение поиска по контексту</p>
+                            </div>
+                        </div>
+                        <div class="use-case">
+                            <div class="use-case-icon">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <div class="use-case-text">
+                                <h4>Персональные рекомендации</h4>
+                                <p>Предложения товаров на основе истории поиска</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock %}

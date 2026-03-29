@@ -1,0 +1,147 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}О системе - QueryRank{% endblock %}
+
+{% block content %}
+<section class="page-hero">
+    <div class="container">
+        <h1>Технические характеристики системы</h1>
+        <p>Узнайте больше о возможностях нашего программного средства</p>
+    </div>
+</section>
+
+<main class="main-content">
+    <div class="container">
+        <section class="system-overview">
+            <h2 class="section-title">Обзор системы</h2>
+            <p>Наше программное средство разработано для оптимизации поиска товаров в интернет-магазинах. Система использует передовые алгоритмы обработки естественного языка и машинного обучения для понимания пользовательских запросов и предоставления наиболее релевантных результатов.</p>
+            
+            <div class="system-architecture">
+                <h3>Архитектура системы</h3>
+                <div class="architecture-diagram">
+                    <div class="layer">
+                        <div class="layer-title">Презентационный слой</div>
+                        <div class="layer-content">
+                            <div class="component">Web-интерфейс</div>
+                            <div class="component">Мобильное приложение</div>
+                            <div class="component">API для интеграции</div>
+                        </div>
+                    </div>
+                    <div class="layer-connector">
+                        <i class="fas fa-arrow-down"></i>
+                    </div>
+                    <div class="layer">
+                        <div class="layer-title">Бизнес-логика</div>
+                        <div class="layer-content">
+                            <div class="component">Обработка запросов</div>
+                            <div class="component">Алгоритм ранжирования</div>
+                            <div class="component">Аналитика и отчетность</div>
+                        </div>
+                    </div>
+                    <div class="layer-connector">
+                        <i class="fas fa-arrow-down"></i>
+                    </div>
+                    <div class="layer">
+                        <div class="layer-title">Слой данных</div>
+                        <div class="layer-content">
+                            <div class="component">База товаров</div>
+                            <div class="component">База запросов</div>
+                            <div class="component">Кэш результатов</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features-detail">
+            <h2 class="section-title">Ключевые возможности</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-language"></i>
+                    </div>
+                    <h3>Обработка естественного языка</h3>
+                    <p>Система понимает смысл запросов на естественном языке, учитывает синонимы, исправляет опечатки и определяет контекст.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>Машинное обучение</h3>
+                    <p>Алгоритмы машинного обучения непрерывно улучшают качество поиска на основе поведения пользователей и обратной связи.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-tachometer-alt"></i>
+                    </div>
+                    <h3>Высокая производительность</h3>
+                    <p>Оптимизированная архитектура обеспечивает обработку до 10 000 запросов в секунду с минимальной задержкой.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-expand-arrows-alt"></i>
+                    </div>
+                    <h3>Масштабируемость</h3>
+                    <p>Система легко масштабируется горизонтально для обработки растущего объема запросов и каталогов товаров.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-sliders-h"></i>
+                    </div>
+                    <h3>Гибкая настройка</h3>
+                    <p>Администратор может настраивать параметры ранжирования, управлять стоп-словами и определять приоритеты.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
+                    <h3>Детальная аналитика</h3>
+                    <p>Встроенные инструменты аналитики предоставляют детальные отчеты по эффективности поиска и поведению пользователей.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="implementation">
+            <h2 class="section-title">Процесс внедрения</h2>
+            <div class="implementation-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Анализ требований</h3>
+                        <p>Изучаем особенности вашего интернет-магазина, категории товаров и специфику запросов пользователей.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Интеграция</h3>
+                        <p>Настраиваем подключение системы к вашей платформе через API или готовые плагины.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Обучение системы</h3>
+                        <p>Настраиваем алгоритмы под вашу товарную базу и проводим первоначальное обучение модели.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Тестирование</h3>
+                        <p>Проводим тестирование системы на реальных данных и корректируем параметры ранжирования.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h3>Запуск и поддержка</h3>
+                        <p>Запускаем систему в эксплуатацию и предоставляем техническую поддержку и консультации.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+{% endblock %}
