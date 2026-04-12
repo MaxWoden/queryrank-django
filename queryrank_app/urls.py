@@ -15,4 +15,15 @@ urlpatterns = [
     path("temp_redirect/", views.temp_redirect, name="temp_redirect"),
     path('system/', views.system, name='system'),
     path('contact/', views.contact, name='contact'),
+    path('product/<slug:product_slug>/', views.product_detail, name='product'),
+    path('category/<slug:category_slug>/', views.category_products, name='category'),
+    path('tag/<slug:tag_slug>/', views.show_tag_products, name='tag'),
+    path('add/', views.add_product, name='add_product'),
+    path('upload/', views.upload_image, name='upload_image'),
+
+    #yandex
+    path('map/', views.map_view, name='map'),
+    path('ai-assistant/', views.ai_assistant, name='ai_assistant'),
+    path('ai-chat/', views.ai_chat_api, name='ai_chat_api'),
+    path('generate-description/', views.generate_description_api, name='generate_description')
 ]

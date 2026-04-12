@@ -1,0 +1,29 @@
+#header {
+    background: #2c3e50;
+    color: white;
+}
+
+#header a {
+    color: white;
+}
+
+.module caption {
+    background: #2c3e50;
+    color: white;
+}
+
+div.breadcrumbs {
+    background: #34495e;
+}
+
+.submit-row input.default {
+    background: #27ae60;
+}
+
+.submit-row input.default:hover {
+    background: #229954;
+}
+
+.selector-chosen h2 {
+    background: #2c3e50 !important;
+}

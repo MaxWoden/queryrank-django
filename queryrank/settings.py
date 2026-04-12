@@ -10,6 +10,8 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/6.0/ref/settings/
 """
 
+import os
+from dotenv import load_dotenv
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -41,7 +43,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'queryrank_app.apps.QueryrankAppConfig'
+    'queryrank_app.apps.QueryrankAppConfig',
+    'users.apps.UsersConfig',
 ]
 
 MIDDLEWARE = [
@@ -107,9 +110,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/6.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LLANGUAGE_CODE = 'ru-RU'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Europe/Moscow'
 
 USE_I18N = True
 
@@ -119,4 +122,27 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+    'users.authentication.EmailAuthBackend',
+]
+
+AUTH_USER_MODEL = 'users.User'
+
+LOGIN_REDIRECT_URL = 'index'  # перенаправление на главную
+LOGOUT_REDIRECT_URL = 'index'  # перенаправление после выхода
+
+load_dotenv()
+
+# API ключи
+YANDEX_MAPS_API_KEY = os.getenv('YANDEX_MAPS_API_KEY')
+YANDEX_GPT_API_KEY = os.getenv('YANDEX_GPT_API_KEY')
+YANDEX_GPT_FOLDER_ID = os.getenv('YANDEX_GPT_FOLDER_ID')
+YANDEX_GPT_MODEL = os.getenv('YANDEX_GPT_MODEL')

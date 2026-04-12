@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+    <h1>{{ title }}</h1>
+    
+    <form action="" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        
+        <div class="form-group">
+            <label class="form-label">Выберите изображение:</label>
+            {{ form.file }}
+            <div class="form-error">{{ form.file.errors }}</div>
+        </div>
+        
+        <button type="submit" class="btn">Загрузить</button>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Карта проезда - QueryRank{% endblock %}
+
+{% block extra_css %}
+<style>
+    #map {
+        width: 100%;
+        height: 500px;
+        margin: 20px 0;
+        border-radius: 15px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    .address-info {
+        background: #f8f9fa;
+        padding: 20px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>Наш офис</h1>
+    
+    <div class="address-info">
+        <h3>Адрес:</h3>
+        <p>г. Казань, ул. Чуйкова, д. 85</p>
+        <p><strong>Координаты:</strong> 55.738623, 49.203157</p>
+    </div>
+    
+    <div id="map"></div>
+    
+    <div class="address-info">
+        <h3>Как добраться:</h3>
+        <ul>
+            <li>🚌 Остановка: "ул. Чуйкова" (автобусы: 22, 28, 43)</li>
+            <li>🚇 Ближайшее метро: "Проспект Победы" (15 минут пешком)</li>
+            <li>🚗 Парковка: есть у здания</li>
+        </ul>
+    </div>
+</div>
+
+<script src="https://api-maps.yandex.ru/2.1/?apikey={{ api_key }}&lang=ru_RU"></script>
+<script>
+    ymaps.ready(init);
+    
+    function init() {
+        // Координаты Казань, ул. Чуйкова, 85
+        var officeCoords = [55.836310, 49.154548];
+        
+        var map = new ymaps.Map("map", {
+            center: officeCoords,
+            zoom: 17,
+            controls: ['zoomControl', 'fullscreenControl']
+        });
+        
+        var placemark = new ymaps.Placemark(officeCoords, {
+            hintContent: 'QueryRank - Офис в Казани',
+            balloonContent: '<strong>QueryRank</strong><br>г. Казань, ул. Чуйкова, д. 85'
+        }, {
+            preset: 'islands#redIcon',
+            iconColor: '#6a11cb'
+        });
+        
+        map.geoObjects.add(placemark);
+        
+        var searchControl = new ymaps.control.SearchControl({
+            options: {
+                provider: 'yandex#search',
+                noPlacemark: false
+            }
+        });
+        map.controls.add(searchControl);
+    }
+</script>
+{% endblock %}

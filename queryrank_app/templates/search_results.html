@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+    <h1>Поиск товаров</h1>
+    
+    <form action="" method="get" class="search-form">
+        <div class="search-fields">
+            {{ form.as_p }}
+        </div>
+        <button type="submit" class="btn">Искать</button>
+    </form>
+    
+    <h2>Результаты поиска ({{ products.count }})</h2>
+    
+    {% if products %}
+    <div class="products-grid">
+        {% for product in products %}
+        <div class="product-card">
+            <h3><a href="{{ product.get_absolute_url }}">{{ product.title }}</a></h3>
+            <p class="price">{{ product.price }} ₽</p>
+            <p class="description">{{ product.description|truncatewords:20 }}</p>
+            <a href="{{ product.get_absolute_url }}" class="btn">Подробнее</a>
+        </div>
+        {% endfor %}
+    </div>
+    {% else %}
+    <p>По вашему запросу ничего не найдено.</p>
+    {% endif %}
+</div>
+{% endblock %}

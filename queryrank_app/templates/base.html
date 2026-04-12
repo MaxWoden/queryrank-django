@@ -23,7 +23,21 @@
                         <li><a href="{% url 'index' %}" class="{% if request.resolver_match.url_name == 'index' %}active{% endif %}">Главная</a></li>
                         <li><a href="{% url 'system' %}" class="{% if request.resolver_match.url_name == 'system' %}active{% endif %}">О системе</a></li>
                         <li><a href="{% url 'contact' %}" class="{% if request.resolver_match.url_name == 'contact' %}active{% endif %}">Контакты</a></li>
+                        <li><a href="{% url 'map' %}">🗺️ Карта</a></li>
+<li><a href="{% url 'ai_assistant' %}">🤖 AI-ассистент</a></li>
+                        {% if user.is_authenticated %}
+        <li><a href="{% url 'users:profile' %}">{{ user.username }}</a></li>
+        <form action="{% url 'users:logout' %}" method="post" style="display: inline;">
+    {% csrf_token %}
+    <button type="submit" style="background: none; border: none; color: inherit; cursor: pointer;">Выйти</button>
+</form>
+    {% else %}
+        <li><a href="{% url 'users:login' %}">Войти</a></li>
+        <li><a href="{% url 'users:register' %}">Регистрация</a></li>
+    {% endif %}
+    
                     </ul>
+                    
                 </nav>
                 <div class="menu-toggle">
                     <i class="fas fa-bars"></i>
@@ -59,11 +73,11 @@
                     <h4>Контакты</h4>
                     <p><i class="fas fa-envelope"></i> info@queryrank.com</p>
                     <p><i class="fas fa-phone"></i> +7 (495) 123-45-67</p>
-                    <p><i class="fas fa-map-marker-alt"></i> Москва, ул. Технологическая, д. 15</p>
+                    <p><i class="fas fa-map-marker-alt"></i> г. Казань, ул. Чуйкова, д. 85</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2023 QueryRank. Лабораторные работы №5-7. Все права защищены.</p>
+                <p>&copy; 2026 QueryRank. Все права защищены.</p>
             </div>
         </div>
     </footer>

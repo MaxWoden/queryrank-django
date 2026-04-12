@@ -1,0 +1,29 @@
+10. Отображение изображений в шаблоне товара
+Шаблон product_detail.html:
+
+html
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+    <div class="product-detail">
+        <div class="product-header">
+            {% if product.photo %}
+            <div class="product-image">
+                <img src="{{ product.photo.url }}" alt="{{ product.title }}">
+            </div>
+            {% endif %}
+            <h1>{{ product.title }}</h1>
+            <div class="product-meta">
+                <span>Категория: {{ product.cat.name }}</span>
+                <span>Цена: {{ product.price }} ₽</span>
+            </div>
+        </div>
+        <div class="product-description">
+            <h3>Описание</h3>
+            <p>{{ product.description|linebreaks }}</p>
+        </div>
+    </div>
+</div>
+{% endblock %}
